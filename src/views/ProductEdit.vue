@@ -30,9 +30,11 @@ export default {
         
     },
     methods:{
-        async saveProduct(){
-      // eslint-disable-next-line no-unused-vars
-            let product = await this.$store.dispatch("editProduct", this.product);
+        saveProduct(){
+            this.$store.dispatch("editProduct", this.product);
+            
+            this.$router.push({name: 'Home'});
+        
         },
         goBackToHome(){
             this.$router.push({name: 'Home'});

@@ -25,11 +25,11 @@
                   <td class="text-center">{{ product.price }}</td>
                   <td>{{ product.description }}</td>
                   <td class="text-right">
-                    <!-- <EditProduct></EditProduct> -->
-                    <router-link :to="{name: 'product-edit', params: {id: product.id}}"><button class="btn btn-dark">Edit</button></router-link>
+                    
+                    <router-link :to="{name: 'product-edit', params: {id: product.id}}"><button class="btn btn-info">Edit</button></router-link>
                     <button
                             type="button"
-                            class="btn btn-danger pull-right"
+                            class="btn btn-danger pull-right px-4 ml-3"
                             data-toggle="modal"
                             data-target=".bd-example-modal-sm"
                           @click="showWarningBeforeDelete(product.id)">Delete</button>
@@ -76,7 +76,7 @@
     // @ is an alias to /src
     // import HelloWorld from "@/components/HelloWorld.vue";
 
-    import Api from "../services/api"
+    // import Api from "../services/api"
 
     import addProduct from "../components/addProduct"
     // import EditProduct from "../components/EditProduct"
@@ -102,15 +102,12 @@
             // $("#my-modal").modal("show");
             this.tempID = ProID;
           },
-          async deleteProduct(ProID){
-            let res = await Api().delete("/products/"+ProID);
+          deleteProduct(ProID){
+           
+           this.$store.dispatch('deleteProduct',ProID)
 
-            console.log("asasdasdasdas!!!!!!!",res)
-            console.log("asasdasdasdas",ProID)
+           
             window.location.reload();
-
-            //     // window.location.reload();
-            // this.state.products = [...this.state.products, res.data]
 
           }
 

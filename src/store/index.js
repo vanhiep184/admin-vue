@@ -17,10 +17,18 @@ export default new Vuex.Store({
             state.products = [...state.products, product]
         },
         EDIT_PRODUCT(state, product) {
-            let productOld = state.products.find(pid => pid.id == product.id)
+            // eslint-disable-next-line no-unused-vars
+            let productOld = state.products.find(pid => pid.id == product.id);
             productOld = product;
-            console.log(productOld);
+
+        },
+        DELETE_PRODUCT(state, ProID) {
+            // eslint-disable-next-line no-unused-vars
+            let products = state.products.filter(pid => pid.id == ProID);
+            state.products = products;
+
         }
+
     },
     actions: {
         async loadProducts({ commit }) {
@@ -44,6 +52,14 @@ export default new Vuex.Store({
             commit('EDIT_PRODUCT', editedProduct)
             return editedProduct;
         },
+        async deleteProduct({ commit }, ProID) {
+            let res = await Api().delete(`/products/${ProID}`);
+            // console.log("Find data to add in here!!", res);
+            // window.location.reload();
+            if (res.status == 200 || res.status == 204) {
+                commit('ADD_PRODUCT', ProID);
+            }
+        }
 
     },
 

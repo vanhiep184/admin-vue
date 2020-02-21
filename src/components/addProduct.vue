@@ -1,7 +1,7 @@
 <template>
     <div class="container">
     <button
-      class="btn btn-primary pull-right"
+      class="btn btn-outline-primary"
       data-toggle="modal"
       data-target=".bd-example-modal-lg"
     >Add New Product</button>
@@ -15,7 +15,7 @@
     >
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header d-flex flex-column">
             <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>

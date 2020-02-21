@@ -27,9 +27,9 @@
             v-model="product.description"></textarea>
         </div>
         <div>
-            <button type="submit" class="btn btn-primary"
+            <button type="submit" class="btn btn-success"
                     @click="saveProduct">{{ buttonText }}</button>
-            <button type="submit" class="btn btn-dark"
+            <button type="submit" class="btn btn-warning ml-3"
                     @click="cancel">Cancel</button>
         </div>
         
