@@ -15,6 +15,11 @@ export default new Vuex.Store({
         },
         ADD_PRODUCT(state, product) {
             state.products = [...state.products, product]
+        },
+        EDIT_PRODUCT(state, product) {
+            let productOld = state.products.find(pid => pid.id == product.id)
+            productOld = product;
+            console.log(productOld);
         }
     },
     actions: {
@@ -24,15 +29,23 @@ export default new Vuex.Store({
             commit('SET_PRODUCTS', res.data)
 
         },
-
-    },
-    method: {
-        async addProduct(newProduct, { commit }) {
-            let res = await Api().post("/products", newProduct);
+        async addProduct({ commit }, product) {
+            let res = await Api().post("/products", product);
             // console.log("Find data to add in here!!", res);
             // window.location.reload();
-            commit('ADD_PRODUCTS', res.data)
-        }
+            let savedProduct = res.data
+            commit('ADD_PRODUCT', savedProduct);
+            // return savedProduct
+        },
+        async editProduct({ commit }, product) {
+            let res = await Api().put(`products/${product.id}`, product);
+            // console.log("Find data to add in here!!", res);
+            let editedProduct = res.data
+            commit('EDIT_PRODUCT', editedProduct)
+            return editedProduct;
+        },
+
     },
+
     modules: {}
 });

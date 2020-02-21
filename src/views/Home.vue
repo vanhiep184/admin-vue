@@ -25,7 +25,8 @@
                   <td class="text-center">{{ product.price }}</td>
                   <td>{{ product.description }}</td>
                   <td class="text-right">
-                    <EditProduct></EditProduct>
+                    <!-- <EditProduct></EditProduct> -->
+                    <router-link :to="{name: 'product-edit', params: {id: product.id}}"><button class="btn btn-dark">Edit</button></router-link>
                     <button
                             type="button"
                             class="btn btn-danger pull-right"
@@ -54,7 +55,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">Are you sure you want to delete this room?</div>
+          <div class="modal-body">Are you sure you want to DELETE this product?</div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             <router-link to="/">
@@ -78,7 +79,7 @@
     import Api from "../services/api"
 
     import addProduct from "../components/addProduct"
-    import EditProduct from "../components/EditProduct"
+    // import EditProduct from "../components/EditProduct"
 
     export default {
         name: "Home",
@@ -88,8 +89,8 @@
           }
         },
         components: {
-            addProduct,
-            EditProduct
+            addProduct
+            // EditProduct
         },
         computed: {
             products() {

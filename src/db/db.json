@@ -13,6 +13,12 @@
       "price": 60000
     },
     {
+      "id": 3,
+      "name": "ES2015 Modules",
+      "description": "Before modules, javascript code loading was a mess. Now it's pretty amazing.",
+      "price": 60000
+    },
+    {
       "id": 4,
       "name": "Creating New Promises",
       "description": "Sometimes you want to start a new promise chain or have greater control over the timing of events. By manually creating a promise, you can do that.",
@@ -20,9 +26,33 @@
     },
     {
       "id": 6,
-      "name": "ES2015 Destructuring",
+      "name": "ES2015 DestructuringAAaaa",
       "description": "Destructuring is really cool, can save you code, and you’re probably already using a small portion of its power. Learn more about this cool new ES2015 / ES6 feature, including how to destructure deeply nested objects, how to use it with Embers import statement,and how to use it with arrays.",
       "price": 23000000
+    },
+    {
+      "id": 8,
+      "name": "Apple Watch SR5AAaa",
+      "description": "Decorators let you easily and repeatedly add functionality to existing functions. In this episode we go over how to use and create decorators, creating two useful decorators that demonstrate different parts of the API",
+      "price": 3453302
+    },
+    {
+      "id": 9,
+      "name": "Iphone 10",
+      "description": "Decorators let you easily and repeatedly add functionality to existing functions. In this episode we go over how to use and create decorators, creating two useful decorators that demonstrate different parts of the API",
+      "price": 3455502
+    },
+    {
+      "id": 10,
+      "name": "Ipad Air",
+      "description": "Decorators let you easily and repeatedly add functionality to existing functions. In this episode we go over how to use and create decorators, creating two useful decorators that demonstrate different parts of the API",
+      "price": 34506662
+    },
+    {
+      "name": "Telephone Old",
+      "price": "301111",
+      "description": " In this episode we go over how to use and create decorators, creating two useful decorators",
+      "id": 11
     }
   ]
 }
