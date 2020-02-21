@@ -1,51 +1,70 @@
 {
-    "products": [{
-            "id": 0,
-            "name": "ES2015 Arrow Functions",
-            "description": "ES2015 (aka ES6) has some great ways to make your code easier to write and understand. In this episode, we cover two different ways that you can make your code clearer by removing the 'function' keyword.",
-            "price": 3000
-        },
-        {
-            "id": 1,
-            "name": "ES2015 Template Strings",
-            "description": "Template strings are an incredibly useful new feature in ES2015... and you can use them in your Ember apps today! Here are 3 cool things that template strings enable.",
-            "price": 40000
-        },
-        {
-            "id": 2,
-            "name": "ES2015 Modules",
-            "description": "Before modules, javascript code loading was a mess. Now it's pretty amazing.",
-            "price": 60000
-        },
-        {
-            "id": 3,
-            "name": "Promise Basics",
-            "description": "Promises are a tool for handling asynchronous communication, and they are commonly used in Ember applications. They’re even built in to Ember Data, route handling, and other parts of the Ember source.",
-            "price": 540000
-        },
-        {
-            "id": 4,
-            "name": "Creating New Promises",
-            "description": "Sometimes you want to start a new promise chain or have greater control over the timing of events. By manually creating a promise, you can do that.",
-            "price": 980020
-        },
-        {
-            "id": 5,
-            "name": "Multiple Concurrent Promises",
-            "description": "Sometimes promises have to happen in an exact order, but often there will be several calls that can be made concurrently. RSVP’s Promise implementation allows that. In this video we show how to use the hash method, one of several methods available to do concurrent promises.",
-            "price": 230032
-        },
-        {
-            "id": 6,
-            "name": "ES2015 Destructuring",
-            "description": "Destructuring is really cool, can save you code, and you’re probably already using a small portion of its power. Learn more about this cool new ES2015 / ES6 feature, including how to destructure deeply nested objects, how to use it with Embers import statement,and how to use it with arrays.",
-            "price": 23000000
-        },
-        {
-            "id": 7,
-            "name": "ES2016 Decorators",
-            "description": "Decorators let you easily and repeatedly add functionality to existing functions. In this episode we go over how to use and create decorators, creating two useful decorators that demonstrate different parts of the API",
-            "price": 34502
-        }
-    ]
+  "products": [
+    {
+      "id": 0,
+      "name": "ES2015 Arrow Functions",
+      "description": "ES2015 (aka ES6) has some great ways to make your code easier to write and understand. In this episode, we cover two different ways that you can make your code clearer by removing the 'function' keyword.",
+      "price": 3000
+    },
+    {
+      "id": 1,
+      "name": "ES2015 Template Strings",
+      "description": "Template strings are an incredibly useful new feature in ES2015... and you can use them in your Ember apps today! Here are 3 cool things that template strings enable.",
+      "price": 40000
+    },
+    {
+      "id": 2,
+      "name": "ES2015 Modules",
+      "description": "Before modules, javascript code loading was a mess. Now it's pretty amazing.",
+      "price": 60000
+    },
+    {
+      "id": 3,
+      "name": "Promise Basics",
+      "description": "Promises are a tool for handling asynchronous communication, and they are commonly used in Ember applications. They’re even built in to Ember Data, route handling, and other parts of the Ember source.",
+      "price": 540000
+    },
+    {
+      "id": 4,
+      "name": "Creating New Promises",
+      "description": "Sometimes you want to start a new promise chain or have greater control over the timing of events. By manually creating a promise, you can do that.",
+      "price": 980020
+    },
+    {
+      "id": 5,
+      "name": "Multiple Concurrent Promises",
+      "description": "Sometimes promises have to happen in an exact order, but often there will be several calls that can be made concurrently. RSVP’s Promise implementation allows that. In this video we show how to use the hash method, one of several methods available to do concurrent promises.",
+      "price": 230032
+    },
+    {
+      "id": 6,
+      "name": "ES2015 Destructuring",
+      "description": "Destructuring is really cool, can save you code, and you’re probably already using a small portion of its power. Learn more about this cool new ES2015 / ES6 feature, including how to destructure deeply nested objects, how to use it with Embers import statement,and how to use it with arrays.",
+      "price": 23000000
+    },
+    {
+      "id": 7,
+      "name": "ES2016 Decorators",
+      "description": "Decorators let you easily and repeatedly add functionality to existing functions. In this episode we go over how to use and create decorators, creating two useful decorators that demonstrate different parts of the API",
+      "price": 34502
+    },
+    {
+      "name": "Ipad air",
+      "price": "120000",
+      "description": "Apple Co.",
+      "id": 8
+    },
+    {
+      "name": "Iphone",
+      "price": "38495",
+      "description": "Apple Care ah",
+      "id": 9
+    },
+    {
+      "name": "Home Alone",
+      "price": "109374",
+      "description": "This is so long>!!!",
+      "id": 10
+    }
+  ]
 }
