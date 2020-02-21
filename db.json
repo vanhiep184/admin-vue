@@ -23,6 +23,12 @@
       "name": "ES2015 Destructuring",
       "description": "Destructuring is really cool, can save you code, and you’re probably already using a small portion of its power. Learn more about this cool new ES2015 / ES6 feature, including how to destructure deeply nested objects, how to use it with Embers import statement,and how to use it with arrays.",
       "price": 23000000
+    },
+    {
+      "id": 7,
+      "name": "ES2016 Decorators",
+      "description": "Decorators let you easily and repeatedly add functionality to existing functions. In this episode we go over how to use and create decorators, creating two useful decorators that demonstrate different parts of the API",
+      "price": 34502
     }
   ]
 }

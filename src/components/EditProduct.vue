@@ -4,7 +4,7 @@
       class="btn btn-primary pull-right"
       data-toggle="modal"
       data-target=".bd-example-modal-lg"
-    >Add New Product</button>
+    >Edit</button>
     <!-- Large modal -->
     <div
       class="modal fade bd-example-modal-lg"

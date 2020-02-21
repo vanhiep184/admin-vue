@@ -25,66 +25,102 @@
                   <td class="text-center">{{ product.price }}</td>
                   <td>{{ product.description }}</td>
                   <td class="text-right">
-                    <button
-                              type="button"
-                              class="btn btn-info pull-left"
-                              data-toggle="modal"
-                              data-target=".bd-example-modal-sm"
-                            >Edit</button>
+                    <EditProduct></EditProduct>
                     <button
                             type="button"
                             class="btn btn-danger pull-right"
                             data-toggle="modal"
                             data-target=".bd-example-modal-sm"
-                          >Delete</button>
+                          @click="showWarningBeforeDelete(product.id)">Delete</button>
                   </td>
-                  
                 </tr>
             </tbody>
           </table>
-       
       </div>
     </div>
-    
+    <div
+      class="modal fade bd-example-modal-sm"
+      id="myModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title" id="exampleModalLabel">Are you sure?</h1>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">Are you sure you want to delete this room?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <router-link to="/">
+              <button
+                type="button"
+                class="btn btn-danger"
+                @click="deleteProduct(tempID)"
+              >Delete</button>
+            </router-link>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
     // @ is an alias to /src
     // import HelloWorld from "@/components/HelloWorld.vue";
+
+    import Api from "../services/api"
+
     import addProduct from "../components/addProduct"
+    import EditProduct from "../components/EditProduct"
 
     export default {
         name: "Home",
+        data(){
+          return {
+            tempID: ""
+          }
+        },
         components: {
-            addProduct
+            addProduct,
+            EditProduct
         },
         computed: {
             products() {
                 return this.$store.state.products;
             }
         },
+        methods:{
+          showWarningBeforeDelete(ProID){
+            // $("#my-modal").modal("show");
+            this.tempID = ProID;
+          },
+          async deleteProduct(ProID){
+            let res = await Api().delete("/products/"+ProID);
+
+            console.log("asasdasdasdas!!!!!!!",res)
+            console.log("asasdasdasdas",ProID)
+            window.location.reload();
+
+            //     // window.location.reload();
+            // this.state.products = [...this.state.products, res.data]
+
+          }
+
+        }
 
     };
 </script>
 
 
 <style scoped lang="scss">
-    .product-container {
-        .product-box {
-            border: 1px solid black;
-            border-radius: 10px;
-            margin: 10px;
-            padding: 10px;
-            text-align: left;
-            display: flex;
-            justify-content: flex-start;
-            img {
-                max-width: 200px;
-                padding: 10px;
-            }
-        }
-    }
+
 </style>
 
 <style>
