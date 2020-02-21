@@ -5,10 +5,13 @@
       <div v-for="product in products" v-bind:key="product.id">
         <router-link :to="{ name: 'product-detail', params:{id: product.id}}">
           <div class="product-box">
-            <img :src="product.thumbnail" />
+            <img
+              src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MU9M2_AV2"
+            />
             <div>
               <h3>{{ product.name }}</h3>
-              <div v-html="product.description">{{ product.description }}</div>
+              <h5><strong>{{ product.price }}</strong></h5>
+              <div>{{ product.description }}</div>
             </div>
           </div>
         </router-link>
@@ -24,10 +27,10 @@
 export default {
   name: "Home",
   components: {},
-  data() {
-    return {
-      products: this.$store.state.products
-    };
+  computed: {
+    products() {
+      return this.$store.state.products;
+    }
   }
 };
 </script>
