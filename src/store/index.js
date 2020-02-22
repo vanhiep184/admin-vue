@@ -49,6 +49,7 @@ export default new Vuex.Store({
             let res = await Api().put(`products/${product.id}`, product);
             // console.log("Find data to add in here!!", res);
             let editedProduct = res.data
+                // console.log("res", editedProduct)
             commit('EDIT_PRODUCT', editedProduct)
             return editedProduct;
         },

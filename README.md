@@ -4,12 +4,15 @@
 ```
 npm install
 ```
+#### Run json-server
 
-### Compiles and hot-reloads for development
+npx json-server src/db/db.json --port 8000
+
+#### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
-
+[Option]
 ### Compiles and minifies for production
 ```
 npm run build
