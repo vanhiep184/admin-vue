@@ -6,8 +6,9 @@ npm install
 ```
 #### Run json-server
 
+```
 npx json-server src/db/db.json --port 8000
-
+```
 #### Compiles and hot-reloads for development
 ```
 npm run serve
